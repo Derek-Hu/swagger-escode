@@ -1,4 +1,4 @@
-Generate typescript codes once user visit online swagger docs.
+Generate typescript codes once user visit online swagger(2.x) docs.
 
 ### Step1 Add settings in webpack or custom node server. 
 
