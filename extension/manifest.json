@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Swagger Codegen",
+    "description": "Get Swagger API Definitions to Server",
+    "version": "1.0",
+    "permissions": [
+        "<all_urls>",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "background": {
+        "scripts": [
+            "scripts/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "scripts/injected.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "page_action": {
+        "default_icon": "icon.png",
+        "default_title": "Swagger Codegen"
+    }
+}

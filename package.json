@@ -1,0 +1,55 @@
+{
+  "name": "swagger-escode",
+  "version": "1.0.0",
+  "description": "Generate TS/JS code when you open swagger docs",
+  "main": "index.js",
+  "scripts": {
+    "lint": "lint-staged",
+    "codegen": "node ts/index.js",
+    "precommit": "lint-staged"
+  },
+  "author": "benlv.hu@qq.com",
+  "homepage": "https://github.com/Derek-Hu/swagger-escode",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Derek-Hu/swagger-escode.git"
+  },
+  "keywords": [
+    "swagger",
+    "codegen",
+    "webpack",
+    "typescript",
+    "javascript",
+    "nodejs",
+    "extension",
+    "openapi"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/generator": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/template": "^7.2.2",
+    "@babel/types": "^7.2.2",
+    "eslint": "^5.6.0",
+    "lint-staged": "^7.0.5",
+    "prettier": "1.12.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "yarn.lock": [
+      "git rm --cached"
+    ]
+  }
+}
