@@ -70,7 +70,9 @@ Install extension using folder `node_modules/swagger-escode/extension`, which su
 
 ### Step3 Visit Swagger Online Docs
 
-3.1. Start webpack/nodejs server and then open `https://business-dev.company.com/swagger-ui.html`
+3.1. Start webpack/nodejs server, 
+* open `http[s]://localhost:[port]`
+* open `https://business-dev.company.com/swagger-ui.html`
 
 3.2. View codes generated in folder `src/codegen/service`
 ```
