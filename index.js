@@ -154,7 +154,6 @@ module.exports = function (params) {
                 fs.writeFileSync(path.resolve(process.cwd(), swaggerSavePath), JSON.stringify(swagger, null, 2));
             }
 
-            console.log('code....');
             compile({
                 swagger,
                 tsType,
